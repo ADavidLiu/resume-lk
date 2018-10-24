@@ -925,6 +925,11 @@ li, .contact input,
           width: 1rem; } }
   .resume-preview-box:hover .resume-preview-box__overlay {
     opacity: 1; }
+  .resume-preview-box + .resume-preview-box {
+    margin-top: 3.333rem; }
+    @media screen and (min-width: 768px) {
+      .resume-preview-box + .resume-preview-box {
+        margin-top: 15px; } }
   .resume-preview-box--cta {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -939,12 +944,10 @@ li, .contact input,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem; }
+    padding: 2.5rem; }
     @media screen and (min-width: 768px) {
       .resume-preview-box--cta {
-        padding-left: 1.875rem;
-        padding-right: 1.875rem; } }
+        padding: 1.875rem; } }
     .resume-preview-box--cta .btn + .btn {
       margin-top: 2rem; }
       @media screen and (min-width: 768px) {

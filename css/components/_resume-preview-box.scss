@@ -74,16 +74,21 @@
         }
     }
 
+    & + & {
+        margin-top: 3.333rem;
+        @include atMedium {
+            margin-top: 15px;
+        }
+    }
+
     &--cta {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+        padding: 2.5rem;
         @include atMedium {
-            padding-left: 1.875rem;
-            padding-right: 1.875rem;
+            padding: 1.875rem;
         }
 
         .btn {
