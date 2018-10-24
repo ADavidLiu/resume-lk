@@ -986,16 +986,19 @@ li, .contact input,
         transform: none;
         width: auto;
         margin-left: 2em; } }
+    @media screen and (min-width: 1200px) {
+      .header__inner-menu {
+        width: 100%;
+        max-width: 1140px; } }
     @media screen and (min-width: 1600px) {
       .header__inner-menu {
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         bottom: 0;
         left: 50%;
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
-        width: 100%;
         margin-left: 0; } }
     @media screen and (min-width: 768px) {
       .header__inner-menu-list {
@@ -1105,7 +1108,10 @@ li, .contact input,
         justify-content: space-between; } }
     @media screen and (min-width: 1600px) {
       .header--inner .header__nav {
-        display: block !important; } }
+        display: block !important;
+        -webkit-box-flex: initial;
+        -ms-flex: initial;
+        flex: initial; } }
     .header--inner .header__menu {
       display: -webkit-box;
       display: -ms-flexbox;
