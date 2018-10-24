@@ -1,0 +1,98 @@
+.resume-preview-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-color: $color-primary-alt-4;
+
+    &__overlay {
+        background-color: rgba($color-primary-alt-3, .8);
+        padding: 2.5rem;
+        transition: all .25s;
+        opacity: 0;
+        @include atMedium {
+            padding: 1.875rem;
+        }
+    }
+
+    &__actions {
+        background-color: $color-white;
+        border-radius: 1rem;
+        padding: 2rem 0;
+        @include atMedium {
+            padding: 1.5rem 0;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+            max-width: 13.333rem;
+            margin: 0 auto;
+            @include atMedium {
+                max-width: 10rem;
+            }
+            
+            p {
+                color: $color-gray-alt-12;
+                transition: all .25s;
+            }
+
+            &:hover {
+                p {
+                    color: $color-primary;
+                }
+            }
+
+            & + & {
+                margin-top: .833rem;
+                @include atMedium {
+                    margin-top: .5rem;
+                }
+            }
+        }
+
+        &-icon {
+            margin-right: 2rem;
+            width: 1.333rem;
+            @include atMedium {
+                margin-right: 1.5rem;
+                width: 1rem;
+            }
+        }
+    }
+
+    &:hover {
+        .resume-preview-box {
+            &__overlay {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        @include atMedium {
+            padding-left: 1.875rem;
+            padding-right: 1.875rem;
+        }
+
+        .btn {
+            & + .btn {
+                margin-top: 2rem;
+                @include atMedium {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+}

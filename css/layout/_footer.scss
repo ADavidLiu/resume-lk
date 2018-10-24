@@ -50,6 +50,22 @@
             align-items: center;
             justify-content: space-between;
         }
+
+        &-menu {
+            @include atMedium {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+            &-item {
+                & + & {
+                    @include atMedium {
+                        margin-left: 1.5rem;
+                    }
+                }
+            }
+        }
     }
 
     &__social {
@@ -80,6 +96,7 @@
     }
 
     &--inner {
+        background: transparent;
         margin-top: 0;
     }
 }

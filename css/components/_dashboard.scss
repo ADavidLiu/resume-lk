@@ -1,3 +1,29 @@
 .dashboard {
     padding: 5rem 0;
+    @include atMedium {
+        padding: 5rem 4.0625rem;
+    }
+
+    &__resumes {
+        @include atMedium {
+            margin: -15px -30px;
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .resume-preview-box {
+            @include atMedium {
+                width: calc(50% - 30px);
+                margin: 15px;
+            }
+            @include atLarge {
+                width: calc(33.333% - 30px);
+            }
+            @include atHuge {
+                width: calc(20% - 30px);
+            }
+        }
+    }
 }

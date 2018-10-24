@@ -237,6 +237,15 @@
 			padding-left: 0;
 			padding-right: 0;
 		}
+
+		&--alt {
+			@include atMedium {
+				position: static;
+				transform: none;
+				width: auto;
+				margin-left: 2em;
+			}
+		}
 	}
 
 	&__profile {
@@ -341,7 +350,8 @@
         &.header--scrolled {
             background-color: transparent;
             box-shadow: none;
-            padding: 1.25rem 0;
+			padding: 1.25rem 0;
+			transform: none;
             @include atMedium {
                 padding: .9375rem 2.1875rem 4rem 2.1875rem;
             }
@@ -349,5 +359,22 @@
                 padding: .9375rem 2.1875rem;
             }
         }
+	}
+
+	&--inner-alt {
+		@include atMedium {
+			padding-bottom: .9375rem;
+		}
+
+		.header {
+			&__nav {
+				@include atMedium {
+					flex: 1;
+					display: flex !important;
+					align-items: flex-end;
+					justify-content: space-between;
+				}
+			}
+		}
 	}
 }
