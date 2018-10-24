@@ -1,0 +1,120 @@
+html,
+body {
+    overflow-x: hidden;
+    font-size: 12px;
+    @include atSmall {
+        font-size: 13px;
+    }
+    @include atMedium {
+        font-size: 14px;
+    }
+    @include atLarge {
+        font-size: 15px;
+    }
+    @include atExtralarge {
+        font-size: 16px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @extend .heading-primary;
+}
+
+h2 {
+    @extend .heading-secondary;
+}
+
+h3 {
+    @extend .heading-tertiary;
+}
+
+h4 {
+    @extend .heading-quaternary;
+}
+
+p,
+li {
+    @extend .paragraph;
+}
+
+a {
+    transition: all .25s;
+    @include linkStates(inherit, none);
+
+    &:hover {
+        color: $color-primary-drk;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.list {
+    li {
+        position: relative;
+        padding-left: 2rem;
+        @include atMedium {
+            padding-left: 1.5rem;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: $color-primary-alt;
+        }
+    }
+}
+
+input,
+button,
+select {
+    border: none;
+
+    &:focus {
+        outline: none !important;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+.container,
+.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+    @include atMedium {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

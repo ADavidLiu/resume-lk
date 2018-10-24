@@ -1,0 +1,99 @@
+.btn {
+    padding: 1rem 3.333rem;
+    border-radius: 3px;
+    box-shadow: 0 10px 50px rgba($color-dark-2, .3);
+    background-color: $color-primary;
+    color: $color-white;
+    transition: all .25s;
+    backface-visibility: hidden;
+    @include linkStates($color-white, none);
+    @include atMedium {
+        padding: .75rem 2.5rem;
+    }
+
+    &__icon {
+        margin-right: 10px;
+    }
+
+    &__label {
+        transition: all .25s;
+        color: $color-white;
+    }
+
+    &:hover {
+        background-color: $color-primary-drk;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        box-shadow: 0 10px 30px rgba($color-dark-2, .3);
+        transform: scale(.99) translateY(1px);
+    }
+
+    &--icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--no-shadow {
+        box-shadow: none;
+
+        &:focus,
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    &--shorter {
+        padding-top: .667rem;
+        padding-bottom: .667rem;
+        @include atMedium {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    &--alt,
+    &--alt-outline {
+        border-radius: 10rem;
+        background-color: $color-primary-alt;
+        box-shadow: none;
+
+        &:active,
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    &--alt-outline {
+        background-color: transparent;
+        border: 2px solid $color-primary-alt;
+        
+        .btn__label {
+            color: $color-primary-alt;
+        }
+
+        &:hover {
+            background: transparent;
+            border-color: $color-primary;
+
+            .btn__label {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &--primary-alt {
+        background-color: $color-primary-alt;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}

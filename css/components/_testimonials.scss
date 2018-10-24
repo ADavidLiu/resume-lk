@@ -1,0 +1,96 @@
+.testimonials {
+    padding-top: 8.125rem;
+
+    .slick {
+        &-dots {
+            margin-top: 1rem;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            @include atMedium {
+                margin-top: .75rem;
+            }
+
+            li {
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: $color-gray-alt-2;
+                cursor: pointer;
+                transition: all .25s;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    background-color: $color-white;
+                    position: absolute;
+                    z-index: -1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    height: 180%;
+                    width: 180%;
+                    border: 2px solid $color-primary-alt;
+                    opacity: 0;
+                    transition: all .25s;
+                }
+
+                & + li {
+                    margin-left: 1.667rem;
+                    @include atMedium {
+                        margin-left: 1.25rem;
+                    }
+                }
+
+                &.slick-active {
+                    background-color: $color-primary-alt;
+                    
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+        text-align: center;
+        
+        &-inner {
+            margin: 0 auto;
+            @include atMedium {
+                max-width: 21.5625rem;
+            }
+        }
+
+        &-icon {
+            height: 2.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2.5rem;
+            @include atMedium {
+                height: 1.875rem;
+                margin-bottom: 1.875rem;
+            }
+        }
+
+        &-headshot {
+            height: 5.833rem;
+            width: 5.833rem;
+            border-radius: 50%;
+            border: 3px solid $color-white;
+            margin: 2.5rem auto 1.667rem auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 30px rgba($color-black, .2);
+            @include atMedium {
+                height: 4.375rem;
+                width: 4.375rem;
+                margin-top: 1.875rem;
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.slider {
+    position: relative;
+
+    &__arrow {
+        height: 4rem;
+        width: 4rem;
+        border-radius: .9375rem;
+        box-shadow: 0 5px 43px rgba($color-black, .1);
+        background-color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .25s;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        cursor: pointer;
+
+        i {
+            color: $color-dark;
+            font-size: 1em;
+            transition: all .25s;
+        }
+
+        &:hover {
+            background-color: $color-primary-alt;
+
+            i {
+                color: $color-white;
+            }
+        }
+
+        &--prev {
+            left: 2.5rem;
+            transform: translate(0, -50%);
+            @include atMedium {
+                left: 1.875rem;
+            }
+            @include atHuge {
+                left: -5rem;
+                transform: translate(-100%, -50%);
+            }
+        }
+
+        &--next {
+            right: 2.5rem;
+            transform: translate(0, -50%);
+            @include atMedium {
+                right: 1.875rem;
+            }
+            @include atHuge {
+                right: -5rem;
+                transform: translate(100%, -50%);
+            }
+        }
+
+        &--small {
+            @include atMedium {
+                height: 2.8125rem;
+                width: 2.8125rem;
+                border-radius: 10px;
+            }
+
+            &.slider__arrow--prev {
+                @include atHuge {
+                    left: -1.5625rem;
+                }
+            }
+
+            &.slider__arrow--next {
+                @include atHuge {
+                    right: -1.5625rem;
+                }
+            }
+        }
+    }
+
+    .slick {
+        &-slide {
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

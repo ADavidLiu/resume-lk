@@ -1,0 +1,111 @@
+// Margin
+.u-margin {
+    &-bottom {
+        &-smallest {
+            margin-bottom: 5px;
+        }
+
+        &-med {
+            margin-bottom: 1.667rem;
+            @include atMedium {
+                margin-bottom: 1.25rem;
+            }
+
+            &-2 {
+                margin-bottom: 2.5rem;
+                @include atMedium {
+                    margin-bottom: 1.875rem;
+                }
+            }
+        }
+
+        &-big {
+            margin-bottom: 3.333rem;
+            @include atMedium {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &-huge {
+            margin-bottom: 5rem;
+            @include atMedium {
+                margin-bottom: 3.75rem;
+            }
+
+            &-2 {
+                margin-bottom: 6.667rem;
+                @include atMedium {
+                    margin-bottom: 5rem;
+                }
+            }
+        }
+    }
+}
+
+
+// Font family
+.u-font {
+    &-titles {
+        &-med {
+            font-family: $font-titles-med;
+        }
+
+        &-smb {
+            font-family: $font-titles-smb;
+        }
+    }
+}
+
+
+// Font weight
+.u-weight {
+    &-smb {
+        font-weight: 600;
+    }
+}
+
+
+// Alignment
+.u-align {
+    &-inline {
+        &-center {
+            text-align: center;
+        }
+    }
+}
+
+
+// Color
+.u-color {
+    &-dark {
+        color: $color-dark;
+    }
+
+    &-gray {
+        &-lgt {
+            color: $color-gray-lgt;
+        }
+        
+        &-alt {
+            &-5 {
+                color: $color-gray-alt-5;
+            }
+
+            &-8 {
+                color: $color-gray-alt-8;
+            }
+        }
+    }
+}
+
+
+// Background
+.u-bg {
+    &-gray {
+        &-alt {
+            &-10 {
+                background-color: $color-gray-alt-10;
+            }
+        }
+    }
+}

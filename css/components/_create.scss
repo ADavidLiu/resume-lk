@@ -1,0 +1,9 @@
+.create {
+    &__copy {
+        padding-top: 5.625rem;
+        margin-bottom: -3rem;
+        @include atMedium {
+            margin-bottom: 0;
+        }
+    }
+}

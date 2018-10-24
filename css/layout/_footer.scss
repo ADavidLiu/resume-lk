@@ -1,0 +1,85 @@
+.footer {
+    background-color: $color-primary-lgt-2;
+    background-image: url("../images/footer-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    margin-top: 6.5625rem;
+    
+    &__main {
+        padding: 3.75rem 0 6.25rem 0;
+        margin-bottom: -3.333rem;
+        text-align: center;
+        @include atMedium {
+            margin-bottom: -2.5rem;
+            text-align: left;
+        }
+
+        &-col {
+            margin-bottom: 3.333rem;
+            @include atMedium {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+    &__menu {
+        &-item {
+            color: $color-gray-alt-6;
+            @extend .paragraph--med;
+
+            & + & {
+                margin-top: 5px;
+            }
+        }
+
+        &-link {
+            &:hover {
+                color: $color-primary-alt;
+            }
+        }
+    }
+
+    &__sub {
+        padding: 2.083rem 0;
+        border-top: 1px solid rgba($color-gray-alt-3, .5);
+        text-align: center;
+        @include atMedium {
+            padding: 1.5625rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        @include atMedium {
+            margin-top: 0;
+        }
+
+        &-link {
+            font-size: 1.333rem;
+            transition: all .25s;
+            @include linkStates($color-gray-alt-4, none);
+            @include atMedium {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                color: $color-primary;
+            }
+
+            & + & {
+                margin-left: 1.25rem;
+            }
+        }
+    }
+
+    &--inner {
+        margin-top: 0;
+    }
+}

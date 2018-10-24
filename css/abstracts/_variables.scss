@@ -1,0 +1,54 @@
+// Colors
+$color-primary: #2d61bb;
+$color-primary-drk: darken($color-primary, 7%);
+$color-primary-lgt: #dce9ff;
+$color-primary-lgt-2: #eaf4ff;
+$color-primary-lgt-3: #e9f1ff;
+$color-primary-alt: #61abfd;
+$color-primary-alt-2: #5495cf;
+
+$color-dark: #323232;
+$color-dark-2: #2a2242;
+
+$color-gray: #737373;
+$color-gray-lgt: #908f8f;
+$color-gray-drk: #656565;
+$color-gray-alt: #f8f8f8;
+$color-gray-alt-2: #d3d3d3;
+$color-gray-alt-3: #7e7e7e;
+$color-gray-alt-4: #a39f9f;
+$color-gray-alt-5: #373737;
+$color-gray-alt-6: #8d8d8d;
+$color-gray-alt-7: #ababab;
+$color-gray-alt-8: #939292;
+$color-gray-alt-9: #676767;
+$color-gray-alt-10: #f5f5f5;
+$color-gray-alt-11: #cdcdcd;
+$color-gray-alt-12: #484848;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+@font-face {
+    font-family: "SFUIDisplay-Medium";
+    src: url("../fonts/SFUIDisplay-Medium.ttf");
+}
+
+@font-face {
+    font-family: "SFUIDisplay-Semibold";
+    src: url("../fonts/SFUIDisplay-Semibold.ttf");
+}
+
+@font-face {
+    font-family: "SFUIDisplay-Bold";
+    src: url("../fonts/SFUIDisplay-Bold.ttf");
+}
+
+$font-main: "Open Sans", "Helvetica", "Arial", sans-serif;
+$font-titles-med: "SFUIDisplay-Medium", "Helvetica", "Arial", sans-serif;
+$font-titles-smb: "SFUIDisplay-Semibold", "Helvetica", "Arial", sans-serif;
+$font-titles-bld: "SFUIDisplay-Bold", "Helvetica", "Arial", sans-serif;

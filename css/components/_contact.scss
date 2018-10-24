@@ -1,0 +1,55 @@
+.contact {
+    input,
+    textarea {
+        background-color: $color-white;
+        padding: 1rem;
+        border-radius: 3px;
+        display: block;
+        width: 100%;
+        border: 1px solid $color-white;
+        margin-bottom: 1.25rem;
+        appearance: none;
+        resize: none;
+        transition: all .25s;
+        @extend .paragraph;
+        @extend .paragraph--small;
+        @include atMedium {
+            padding: .75rem;
+        }
+
+        &::placeholder {
+            color: $color-gray-alt-7;
+        }
+
+        &:focus {
+            border-color: $color-primary;
+            outline: none;
+        }
+    }
+
+    textarea {
+        height: 6.667rem;
+        @include atMedium {
+            height: 5rem;
+        }
+    }
+
+    button {
+        padding: 10px 2.9167rem;
+        background-color: $color-primary-alt;
+        border-radius: 3px;
+        color: $color-white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all .25s;
+        @extend .paragraph;
+        @extend .paragraph--small;
+        @include atMedium {
+            padding: 10px 2.1875rem;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}

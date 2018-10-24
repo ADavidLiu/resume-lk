@@ -1,0 +1,51 @@
+.icon {
+    background-color: $color-primary-lgt-3;
+    border-radius: 10px;
+    height: 4rem;
+    width: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .25s;
+    @include atMedium {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    &__img {
+        height: 1.667rem;
+        @include atMedium {
+            height: 1.25rem;
+        }
+
+        &--offset-right {
+            margin-right: -5px;
+        }
+    }
+
+    &--img {
+        height: 2.9167rem;
+        width: auto;
+        background: transparent;
+        border-radius: 0;
+        @include atMedium {
+            height: 2.1875rem;
+        }
+    }
+
+    &--big {
+        height: 5.8333rem;
+        width: 5.8333rem;
+        @include atMedium {
+            height: 4.1875rem;
+            width: 4.1875rem;
+        }
+
+        .icon__img {
+            height: 2.083rem;
+            @include atMedium {
+                height: 1.5625rem;
+            }
+        }
+    }
+}

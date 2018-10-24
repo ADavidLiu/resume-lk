@@ -1,0 +1,46 @@
+.feature {
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    padding-top: 5rem;
+    transition: all .25s;
+    position: relative;
+    margin-top: 5rem;
+    @include atMedium {
+        margin-top: 0;
+        padding: 1.875rem;
+        padding-left: 3.75rem;
+        margin-left: 2.09375rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        left: 2.5rem;
+        transform: translateY(-50%);
+        background-color: $color-white;
+        box-shadow: 0 10px 50px rgba($color-black, .1);
+        @include atMedium {
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 10px 50px rgba($color-black, .1);
+
+        .feature__icon {
+            background-color: $color-primary-lgt-3;
+        }
+    }
+
+    & + & {
+        @include atMedium {
+            margin-top: 1.875rem;
+        }
+    }
+}

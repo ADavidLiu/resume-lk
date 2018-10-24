@@ -1,0 +1,44 @@
+.banner {
+    position: relative;
+    background-image: url("../images/wave-banner.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% + 21vw) -23vw;
+    background-size: contain;
+    padding-top: 10.25rem;
+    position: relative;
+    @include atMedium {
+        padding-top: 21.25rem;
+        padding-bottom: 11.875rem;
+        background-position: calc(100% + 22vw) -23vw;
+        background-size: auto 120%;
+    }
+    @include atExtralarge {
+        background-position: calc(100% + 16vw) -17vw;
+    }
+    @include atHuge {
+        background-position: calc(100% + 12.25rem) -13rem;
+    }
+
+    &__img {
+        padding: 0 30px;
+        margin-bottom: 4rem;
+        display: block;
+        @include atSmall {
+            max-width: 540px;
+            margin: 0 auto 4rem auto;
+        }
+        @include atMedium {
+            padding: 0;
+            margin-bottom: 0;
+            position: absolute;
+            bottom: 50%;
+            right: 5px;
+            width: 50%;
+            transform: translateY(50%);
+        }
+        @include atExtralarge {
+            width: 45%;
+            max-width: 49.6875rem;
+        }
+    }
+}
