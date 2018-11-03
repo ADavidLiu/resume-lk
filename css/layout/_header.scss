@@ -248,6 +248,13 @@
 		}
 	}
 
+	&__profile-wrapper {
+		margin: 1rem auto 0 auto;
+		@include atMedium {
+			margin: 0;
+		}
+	}
+
 	&__profile {
 		display: block;
 
@@ -278,6 +285,9 @@
 			&__content {
 				&-controls {
 					margin-bottom: 2rem;
+					@include atMedium {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
@@ -373,6 +383,21 @@
 					display: flex !important;
 					align-items: flex-end;
 					justify-content: space-between;
+				}
+				@include atExtrahuge {
+					flex: initial;
+				}
+			}
+
+			&__inner-menu {
+				@include atExtrahuge {
+					margin-left: 0;
+					max-width: 100%;
+					width: 1140px;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
 				}
 			}
 		}

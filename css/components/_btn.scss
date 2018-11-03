@@ -13,6 +13,17 @@
 
     &__icon {
         margin-right: 10px;
+
+        &--alt {
+            margin-right: 0;
+            margin-left: 1.25rem;
+        }
+
+        &--font {
+            font-size: .875em;
+            line-height: 1;
+            transform: translateY(1px);
+        }
     }
 
     &__label {
@@ -32,9 +43,25 @@
     }
 
     &--icon {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
+    }
+
+    &--wider {
+        padding: 1.167rem 7.5rem;
+        @include atMedium {
+            padding: .875rem 5.625rem;
+        }
+    }
+
+    &--shorter {
+        padding-top: .667rem;
+        padding-bottom: .667rem;
+        @include atMedium {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
     }
 
     &--no-shadow {
@@ -107,6 +134,19 @@
 
         &:hover {
             background-color: rgba($color-white, .25);
+        }
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-gray-alt-12;
+
+        .btn__label {
+            color: $color-gray-alt-12;
+        }
+
+        &:hover {
+            background-color: $color-gray-alt-11;
         }
     }
 }

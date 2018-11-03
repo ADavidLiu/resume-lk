@@ -16,6 +16,23 @@ body {
     }
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
 h1,
 h2,
 h3,

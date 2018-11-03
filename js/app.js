@@ -1,5 +1,7 @@
 //@prepros-prepend "modules/header.js"
 //@prepros-prepend "modules/scrollManager.js"
+//@prepros-prepend "modules/popupManager.js"
+//@prepros-prepend "modules/templatesManager.js"
 
 $(document).ready(function () {
     
@@ -83,5 +85,13 @@ $(document).ready(function () {
             }
         ]
     });
+
+    if ($(".popup").length > 0) {
+        const popupManager = new PopupManager();
+    }
+
+    if ($(".select-template").length > 0) {
+        const templatesManager = new TemplatesManager();
+    }
     
 });
