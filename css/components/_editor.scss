@@ -1,0 +1,49 @@
+.editor {
+    &__status {
+        text-align: center;
+        position: relative;
+
+        &-chart {
+            width: 16.25rem;
+            height: 16.25rem;
+            margin: 0 auto;
+            @include atMedium {
+                width: 12.1875rem;
+                height: 12.1875rem;
+            }
+
+            canvas {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        &-copy {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    &__main {
+        padding: 3.333rem 0;
+        @include atMedium {
+            padding: 2.5rem 2.1875rem 2.5rem 1rem;
+        }
+        @include atExtralarge {
+            padding: 2.5rem 3.4375rem 2.5rem 2.8125rem;
+        }
+    }
+
+    &__group {
+        padding: 2.5rem 0;
+        background-color: $color-white;
+        box-shadow: 0px 0px 29px 0px rgba($color-black, .05);
+        border-radius: 1.25rem;
+        @include atMedium {
+            padding: 1.875rem 0;
+            border-radius: .9375rem;
+        }
+    }
+}

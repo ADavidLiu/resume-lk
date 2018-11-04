@@ -2,6 +2,7 @@
 //@prepros-prepend "modules/scrollManager.js"
 //@prepros-prepend "modules/popupManager.js"
 //@prepros-prepend "modules/templatesManager.js"
+//@prepros-prepend "modules/editor.js"
 
 $(document).ready(function () {
     
@@ -92,6 +93,10 @@ $(document).ready(function () {
 
     if ($(".select-template").length > 0) {
         const templatesManager = new TemplatesManager();
+    }
+
+    if ($(".editor").length > 0) {
+        const editor = new Editor();
     }
     
 });

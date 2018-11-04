@@ -1,0 +1,101 @@
+.sidebar {
+    &__top {
+        display: none;
+        @include atMedium {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 5rem;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        width: 10rem;
+    }
+
+    &__main {
+        padding: 2rem 0;
+        @include atMedium {
+            padding: 1.875rem 0;
+        }
+    }
+
+    &__menu {
+        &-item {
+            font-family: $font-main;
+            color: $color-primary-alt;
+            font-weight: 600;
+        }
+
+        &-icon {
+            margin-right: 1.125rem;
+        }
+
+        &-label {
+            position: relative;
+            display: block;
+            padding-right: 2rem;
+
+            &-icon {
+                transition: all .25s;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                color: $color-gray-alt-8;
+            }
+
+            &--add {
+                @include linkStates($color-primary-alt, none);
+
+                .sidebar__menu-icon {
+                    transition: none !important;
+                    color: inherit !important;
+                }
+
+                &:hover {
+                    color: $color-primary-drk;
+                }
+            }
+        }
+
+        &--sub {
+            padding-left: 2.5rem;
+            margin-top: 1.25rem;
+
+            .sidebar {
+                &__menu {
+                    &-item {
+                        color: $color-gray-alt-12;
+
+                        &:hover {
+                            i {
+                                color: $color-primary-drk;
+                            }
+                        }
+
+                        & + .sidebar__menu-item {
+                            margin-top: 1.25rem;
+                        }
+                    }
+
+                    &-icon {
+                        transition: all .25s;
+                        color: $color-gray-alt-8;
+                    }
+                }
+            }
+        }
+    }
+
+    &__footer {
+        padding-bottom: 4rem;
+        padding-top: 3rem;
+        margin-top: auto;
+        margin-bottom: 0;
+        @include atMedium {
+            padding-bottom: 6.25rem;
+        }
+    }
+}
