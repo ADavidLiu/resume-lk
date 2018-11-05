@@ -9,11 +9,14 @@ class Editor {
             lineCap: "round"
         });
 
-        const sortableSelector = $("[data-sortable]")[0];
-        const sortable = Sortable.create(sortableSelector, {
-            animation: 150,
-            handle: ".fa-bars",
-            forceFallback: true
+        const $sortableSelector = $("[data-sortable]");
+        $sortableSelector.each(function(i) {
+            const $this = $(this);
+            const sortable = Sortable.create($this[0], {
+                animation: 150,
+                handle: ".fa-bars",
+                forceFallback: true
+            });
         });
     }
 }
