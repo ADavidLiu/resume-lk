@@ -8,5 +8,12 @@ class Editor {
             startAngle: -Math.PI/2,
             lineCap: "round"
         });
+
+        const sortableSelector = $("[data-sortable]")[0];
+        const sortable = Sortable.create(sortableSelector, {
+            animation: 150,
+            handle: ".fa-bars",
+            forceFallback: true
+        });
     }
 }

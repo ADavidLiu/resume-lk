@@ -66,7 +66,34 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="editor__group">
+                                <aside class="editor__group-sidebar">
+                                    <div class="editor__group-title">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <p class="paragraph--big u-color-gray-alt-14 u-weight-smb">Skills</p>
+                                    </div>
+                                    <ul class="editor__group-list" data-sortable="">
+                                        <li class="editor__group-item editor__group-item--active">
+                                            <div class="editor__group-item-label">
+                                                <i class="fas fa-bars"></i>
+                                                <p class="paragraph--med u-weight-smb">Skill #1</p>
+                                            </div>
+                                            <i class="fas fa-trash editor__group-item-delete"></i>
+                                        </li>
+                                        <li class="editor__group-item">
+                                            <div class="editor__group-item-label">
+                                                <i class="fas fa-bars"></i>
+                                                <p class="paragraph--med u-weight-smb">Skill #2</p>
+                                            </div>
+                                            <i class="fas fa-trash editor__group-item-delete"></i>
+                                        </li>
+                                    </ul>
+                                    <div class="editor__group-sidebar-btn">
+                                        <button class="btn btn--auto btn--primary-alt btn--no-shadow btn--full btn--accent"><p class="btn__label paragraph--med"><i class="fas fa-plus btn__icon"></i> Add New</p></button>
+                                    </div>
+                                </aside>
+                                <div class="editor__group-main">
 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -81,7 +108,7 @@
                 <ul class="sidebar__menu">
                     <li class="sidebar__menu-item editor__menu">
                         <a href="#" class="sidebar__menu-label"><i class="fas fa-sliders-h sidebar__menu-icon"></i>Fill in your Resume</a>
-                        <ul class="sidebar__menu sidebar__menu--sub">
+                        <ul class="sidebar__menu sidebar__menu--sub" data-sortable>
                             <li class="sidebar__menu-item">
                                 <a href="#" class="sidebar__menu-label"><i class="fas fa-user sidebar__menu-icon"></i>Personal Info <i class="sidebar__menu-label-icon fas fa-lock"></i></a>
                             </li>
@@ -119,6 +146,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.489/build/pdf.min.js"></script>
     <script src="js/vendors/circle-progress.min.js"></script>
+    <script src="js/vendors/Sortable.min.js"></script>
     <script src="js/app-dist.js"></script>
 
 </body>

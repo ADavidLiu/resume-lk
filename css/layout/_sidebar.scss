@@ -26,6 +26,19 @@
             font-family: $font-main;
             color: $color-primary-alt;
             font-weight: 600;
+
+            &.sortable-ghost {
+                box-shadow: none !important;
+                opacity: .25;
+            }
+
+            &.sortable-chosen {
+                box-shadow: none !important;
+            }
+
+            &.sortable-drag {
+                box-shadow: none !important;
+            }
         }
 
         &-icon {
@@ -36,6 +49,10 @@
             position: relative;
             display: block;
             padding-right: 2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 215px;
+            white-space: nowrap;
 
             &-icon {
                 transition: all .25s;

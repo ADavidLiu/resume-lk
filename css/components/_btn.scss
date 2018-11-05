@@ -48,6 +48,11 @@
         justify-content: center;
     }
 
+    &--auto {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     &--wider {
         padding: 1.167rem 0;
         max-width: 100%;
