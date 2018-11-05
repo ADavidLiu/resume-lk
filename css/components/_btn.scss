@@ -49,9 +49,12 @@
     }
 
     &--wider {
-        padding: 1.167rem 7.5rem;
+        padding: 1.167rem 0;
+        max-width: 100%;
+        min-width: 200px;
         @include atMedium {
-            padding: .875rem 5.625rem;
+            padding: .875rem;
+            min-width: 15rem;
         }
     }
 

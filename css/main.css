@@ -269,10 +269,13 @@ li, .contact input,
     -ms-flex-pack: center;
     justify-content: center; }
   .btn--wider {
-    padding: 1.167rem 7.5rem; }
+    padding: 1.167rem 0;
+    max-width: 100%;
+    min-width: 200px; }
     @media screen and (min-width: 768px) {
       .btn--wider {
-        padding: .875rem 5.625rem; } }
+        padding: .875rem;
+        min-width: 15rem; } }
   .btn--shorter {
     padding-top: .667rem;
     padding-bottom: .667rem; }
@@ -1044,8 +1047,9 @@ li, .contact input,
     @media screen and (min-width: 768px) {
       .popup__content {
         margin: 0 auto; } }
-  .popup__inner {
-    width: 70%; }
+  @media screen and (min-width: 768px) {
+    .popup__inner {
+      max-width: 50%; } }
   .popup__template {
     width: 100%;
     height: auto; }
@@ -1796,7 +1800,10 @@ li, .contact input,
         margin-left: 1.25rem; }
   .footer--inner {
     background: transparent;
-    margin-top: 0; }
+    margin-top: 0;
+    border-top: 1px solid rgba(126, 126, 126, 0.5); }
+    .footer--inner .footer__sub {
+      border-top: 0; }
 
 .u-margin-bottom-smallest {
   margin-bottom: 5px; }
