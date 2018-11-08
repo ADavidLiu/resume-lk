@@ -25,6 +25,35 @@
             transform: translate(-50%, -50%);
         }
     }
+
+    &__photo {
+        padding: 0 2rem;
+        text-align: center;
+        @include atHuge {
+            padding: 0 3.75rem;
+        }
+
+        &-img {
+            width: 100%;
+            max-width: 12.5rem;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto;
+            position: relative;
+
+            &:after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+        }
+
+        &-check {
+            margin: 2.5rem auto;
+        }
+    }
     
     &__main {
         padding: 3.333rem 0;
@@ -52,7 +81,7 @@
             padding: 1.5625rem 0;
             border-bottom: 1px solid $color-gray-alt-16;
             @include atMedium {
-                width: 30%;
+                width: 40%;
                 max-width: 22.5rem;
                 border-bottom: 0;
                 border-right: 1px solid $color-gray-alt-16;
@@ -60,6 +89,9 @@
                 flex-direction: column;
                 align-items: stretch;
                 justify-content: flex-start;
+            }
+            @include atLarge {
+                width: 30%;
             }
 
             &-btn {
@@ -118,6 +150,17 @@
                 @include atMedium {
                     max-width: 100px;
                 }
+                @include atExtralarge {
+                    max-width: 100%;
+                }
+            }
+
+            &-delete {
+                transition: all .25s;
+
+                &:hover {
+                    color: $color-primary;
+                }
             }
 
             &-label {
@@ -144,8 +187,140 @@
             padding: 1.5625rem;
             @include atMedium {
                 flex: 1;
+                margin-bottom: -1.5625rem;
+            }
+            @include atLarge {
                 padding: 1.5625rem 3.125rem;
             }
+
+            &-wrapper {
+                margin-bottom: 2.083rem;
+                @include atMedium {
+                    margin-bottom: 1.5625rem;
+                }
+            }
+
+            &-form {
+                margin-bottom: -2.083rem;
+                @include atMedium {
+                    margin-bottom: -1.5625rem;
+                }
+
+                &--alt {
+                    margin-bottom: 0;
+                    padding-bottom: 1.5625rem;
+                }
+            }
+
+            &-btn {
+                padding: 0 1.5625rem;
+                margin-top: 3.75rem;
+                margin-bottom: 1.5625rem;
+                @include atMedium {
+                    padding: 0;
+                }
+
+                .btn {
+                    @include atMedium {
+                        max-width: 17.8125rem;
+                    }
+                }
+            }
+        }
+
+        & + & {
+            margin-top: 3.333rem;
+            @include atMedium {
+                margin-top: 2.5rem;
+            }
+        }
+    }
+
+    &__skills {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include atLarge {
+            align-items: flex-end;
+        }
+
+        &-row {
+            flex: 1;
+        }
+
+        &-delete {
+            margin-left: 2.5rem;
+            @include atMedium {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                margin-left: 1.875rem;
+            }
+            @include atLarge {
+                padding-bottom: 2.7rem;
+            }
+
+            &-icon {
+                cursor: pointer;
+                color: $color-gray-alt-13;
+                font-size: 1.333rem;
+                transition: all .25s;
+                @include atMedium {
+                    font-size: 1rem;
+                }
+
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+    &__wysiwyg {
+        height: 10.625rem;
+        margin-bottom: 2.083rem;
+        @include atMedium {
+            margin-bottom: 1.5625rem;
+        }
+
+        * {
+            color: $color-dark;
+        }
+    }
+}
+
+.trumbowyg {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include atMedium {
+        margin-top: 0;
+        min-height: 10.625rem;
+    }
+
+    &-box {
+        border-color: $color-gray-alt-17;
+    }
+
+    &-button-pane {
+        background-color: transparent;
+        @include atExtralarge {
+            border: 0;
+        }
+    }
+
+    &-fontfamily-button {
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 1.167rem;
+        color: $color-gray-alt-12;
+        @include atMedium {
+            font-size: .875rem;
+        }
+    }
+
+    &-editor {
+        @include atMedium {
+            min-height: 10.625rem;
         }
     }
 }

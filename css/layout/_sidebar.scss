@@ -51,8 +51,10 @@
             padding-right: 2rem;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 215px;
             white-space: nowrap;
+            @include atMedium {
+                max-width: 215px;
+            }
 
             &-icon {
                 transition: all .25s;

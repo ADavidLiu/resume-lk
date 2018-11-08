@@ -1,0 +1,93 @@
+label {
+    font-family: $font-main;
+    font-weight: 600;
+    color: $color-gray-alt-12;
+    font-size: 1.167rem;
+    line-height: 3rem;
+    margin-bottom: 5px;
+    @include atMedium {
+        font-size: .875rem;
+        line-height: 2.25rem;
+    }
+}
+
+select,
+input {
+    height: 4.167rem;
+    display: block;
+    width: 100%;
+    padding: 0 2rem;
+    border: 1px solid $color-gray-alt-17;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    font-family: $font-main;
+    font-weight: 600;
+    background: $color-white;
+    appearance: none;
+    transition: all .25s;
+    @include atMedium {
+        height: 3.125rem;
+        padding: 0 1.5rem;
+        font-size: 1.125rem;
+    }
+
+    &::placeholder {
+        color: $color-gray-alt-18;
+    }
+
+    &:focus {
+        border-color: $color-primary;
+    }
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input[type="checkbox"] {
+        border-radius: 2px;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 50% auto;
+        background-position: center;
+        @include atMedium {
+            height: 1.125rem;
+            width: 1.125rem;
+        }
+
+        &:focus {
+            border-color: $color-gray-alt-17;
+        }
+    
+        &:checked {
+            border-color: $color-primary-alt;
+            background-color: $color-primary-alt;
+            background-image: url("../images/check.svg");
+        }
+    
+        & + label {
+            cursor: pointer;
+            margin-bottom: 0;
+            margin-left: 8px;
+        }
+    }
+}
+
+select {
+    background-image: url("../images/i-dropdown-arrow.png");
+    background-repeat: no-repeat;
+    background-size: auto 6px;
+    background-position: calc(100% - 1rem) center;
+
+    option {
+        &[disabled] {
+            color: $color-gray-alt-18;
+        }
+    }
+}

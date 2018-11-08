@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="js/vendors/trumbowyg/ui/trumbowyg.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -68,6 +69,257 @@
                             <div class="editor__group">
                                 <aside class="editor__group-sidebar">
                                     <div class="editor__group-title">
+                                        <i class="fas fa-user"></i>
+                                        <p class="paragraph--big u-color-gray-alt-14 u-weight-smb">Personal Info</p>
+                                    </div>
+                                    <div class="editor__photo">
+                                        <div class="editor__photo-img" style="background-image: url('images/headshot.jpg');"></div>
+                                        <div class="editor__photo-check checkbox">
+                                            <input type="checkbox" id="use-profile-photo">
+                                            <label for="use-profile-photo">Use profile photo</label>
+                                        </div>
+                                        <button class="btn btn--auto btn--primary-alt btn--no-shadow btn--full btn--accent"><p class="btn__label paragraph--med"><i class="fas fa-upload btn__icon"></i> Upload Photo</p></button>
+                                    </div>
+                                </aside>
+                                <div class="editor__group-main">
+                                    <div class="row">
+                                        <div class="col-12 editor__group-main-form editor__group-main-form--alt">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-4">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Title before</label>
+                                                        <input type="text" placeholder="Title before">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 col-xl-4">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>First Name</label>
+                                                        <input type="text" placeholder="First Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 col-xl-4">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Last Name</label>
+                                                        <input type="text" placeholder="Last Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Date of Birth</label>
+                                                        <input type="text" placeholder="YYYY/MM/DD">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Nationality</label>
+                                                        <input type="text" placeholder="Nationality">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Phone Number</label>
+                                                        <input type="tel" placeholder="Phone Number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Email Address</label>
+                                                        <input type="email" placeholder="Email Address">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Website Link</label>
+                                                        <input type="text" placeholder="Website Link">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <label>Address</label>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="editor__group-main-wrapper">
+                                                                <input type="text" placeholder="Street line">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="editor__group-main-wrapper">
+                                                                <input type="text" placeholder="City">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="editor__group-main-wrapper">
+                                                                <input type="text" placeholder="Postal Code">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="editor__group-main-wrapper">
+                                                                <input type="text" placeholder="Country">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label>Profile</label>
+                                                    <div class="editor__wysiwyg editor__education-wysiwyg"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="editor__group">
+                                <aside class="editor__group-sidebar">
+                                    <div class="editor__group-title">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <p class="paragraph--big u-color-gray-alt-14 u-weight-smb">Education</p>
+                                    </div>
+                                    <ul class="editor__group-list" data-sortable="">
+                                        <li class="editor__group-item editor__group-item--active">
+                                            <div class="editor__group-item-label">
+                                                <i class="fas fa-bars"></i>
+                                                <p class="paragraph--med u-weight-smb">Education #1</p>
+                                            </div>
+                                            <i class="fas fa-trash editor__group-item-delete"></i>
+                                        </li>
+                                    </ul>
+                                    <div class="editor__group-sidebar-btn">
+                                        <button class="btn btn--auto btn--primary-alt btn--no-shadow btn--full btn--accent"><p class="btn__label paragraph--med"><i class="fas fa-plus btn__icon"></i> Add New</p></button>
+                                    </div>
+                                </aside>
+                                <div class="editor__group-main">
+                                    <div class="row">
+                                        <div class="col-12 editor__group-main-form editor__group-main-form--alt">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Institution</label>
+                                                        <input type="text" placeholder="Institution">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Field of Study</label>
+                                                        <input type="text" placeholder="Field of Study">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>City</label>
+                                                        <input type="text" placeholder="City">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Country</label>
+                                                        <input type="text" placeholder="Country">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-xl-6">
+                                                    <label>Time Period</label>
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6 editor__group-main-wrapper">
+                                                            <select required>
+                                                                <option value="" disabled selected hidden>Month</option>
+                                                                <option value="January">January</option>
+                                                                <option value="February">February</option>
+                                                                <option value="March">March</option>
+                                                                <option value="June">June</option>
+                                                                <option value="July">July</option>
+                                                                <option value="August">August</option>
+                                                                <option value="September">September</option>
+                                                                <option value="October">October</option>
+                                                                <option value="November">November</option>
+                                                                <option value="December">December</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 editor__group-main-wrapper">
+                                                            <select required>
+                                                                <option value="" disabled selected hidden>Year</option>
+                                                                <option value="2018">2018</option>
+                                                                <option value="2017">2017</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="2013">2013</option>
+                                                                <option value="2012">2012</option>
+                                                                <option value="2011">2011</option>
+                                                                <option value="2010">2010</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-6">
+                                                    <label class="d-none d-xl-inline-block">&nbsp;</label>
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6 editor__group-main-wrapper">
+                                                            <select required>
+                                                                <option value="" disabled selected hidden>Month</option>
+                                                                <option value="January">January</option>
+                                                                <option value="February">February</option>
+                                                                <option value="March">March</option>
+                                                                <option value="June">June</option>
+                                                                <option value="July">July</option>
+                                                                <option value="August">August</option>
+                                                                <option value="September">September</option>
+                                                                <option value="October">October</option>
+                                                                <option value="November">November</option>
+                                                                <option value="December">December</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 editor__group-main-wrapper">
+                                                            <select required>
+                                                                <option value="" disabled selected hidden>Year</option>
+                                                                <option value="2018">2018</option>
+                                                                <option value="2017">2017</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="2013">2013</option>
+                                                                <option value="2012">2012</option>
+                                                                <option value="2011">2011</option>
+                                                                <option value="2010">2010</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-end">
+                                                <div class="col-auto">
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="currently-study-here">
+                                                        <label for="currently-study-here">Currently I study here</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label>Description</label>
+                                                    <div class="editor__wysiwyg editor__education-wysiwyg"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="editor__group">
+                                <aside class="editor__group-sidebar">
+                                    <div class="editor__group-title">
                                         <i class="fas fa-chart-bar"></i>
                                         <p class="paragraph--big u-color-gray-alt-14 u-weight-smb">Skills</p>
                                     </div>
@@ -79,20 +331,55 @@
                                             </div>
                                             <i class="fas fa-trash editor__group-item-delete"></i>
                                         </li>
-                                        <li class="editor__group-item">
-                                            <div class="editor__group-item-label">
-                                                <i class="fas fa-bars"></i>
-                                                <p class="paragraph--med u-weight-smb">Skill #2</p>
-                                            </div>
-                                            <i class="fas fa-trash editor__group-item-delete"></i>
-                                        </li>
                                     </ul>
                                     <div class="editor__group-sidebar-btn">
                                         <button class="btn btn--auto btn--primary-alt btn--no-shadow btn--full btn--accent"><p class="btn__label paragraph--med"><i class="fas fa-plus btn__icon"></i> Add New</p></button>
                                     </div>
                                 </aside>
                                 <div class="editor__group-main">
-
+                                    <div class="row">
+                                        <div class="col-12 editor__group-main-form">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="editor__group-main-wrapper">
+                                                        <label>Skill Category</label>
+                                                        <input type="text" placeholder="Skill Category">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="editor__skills">
+                                                        <div class="row editor__skills-row">
+                                                            <div class="col-12 col-lg-6">
+                                                                <div class="editor__group-main-wrapper">
+                                                                    <label>Skill Name</label>
+                                                                    <input type="text" placeholder="Skill Name" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-lg-6">
+                                                                <div class="editor__group-main-wrapper">
+                                                                    <label>Skill Level</label>
+                                                                    <select required>
+                                                                        <option value="" disabled selected hidden>Skill Level</option>
+                                                                        <option value="beginner">Beginner</option>
+                                                                        <option value="regular">Regular</option>
+                                                                        <option value="expert">Expert</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="editor__skills-delete">
+                                                            <i class="fas fa-trash editor__skills-delete-icon"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="editor__group-main-btn">
+                                                <button class="btn btn--auto btn--primary-alt btn--no-shadow btn--full btn--accent"><p class="btn__label paragraph--med"><i class="fas fa-plus btn__icon"></i> Add New Skill Category</p></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -147,6 +434,9 @@
     <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.489/build/pdf.min.js"></script>
     <script src="js/vendors/circle-progress.min.js"></script>
     <script src="js/vendors/Sortable.min.js"></script>
+    <script src="js/vendors/trumbowyg/trumbowyg.min.js"></script>
+    <script src="js/vendors/trumbowyg/plugins/fontfamily/trumbowyg.fontfamily.min.js"></script>
+    <script src="js/vendors/trumbowyg/plugins/fontsize/trumbowyg.fontsize.min.js"></script>
     <script src="js/app-dist.js"></script>
 
 </body>
