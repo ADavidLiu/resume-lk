@@ -53,6 +53,15 @@
         &-check {
             margin: 2.5rem auto;
         }
+
+        &-input {
+            display: none;
+        }
+
+        &-label {
+            width: 100%;
+            margin-bottom: 0;
+        }
     }
     
     &__main {
@@ -283,9 +292,15 @@
             margin-bottom: 1.5625rem;
         }
 
-        * {
+        *,
+        p {
             color: $color-dark;
+            margin-bottom: 0 !important;
         }
+    }
+
+    .trumbowyg-editor.trumbowyg-reset-css p {
+        margin-bottom: 0 !important;
     }
 }
 

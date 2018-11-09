@@ -1190,6 +1190,11 @@ li, .contact input,
       padding-bottom: 100%; }
   .editor__photo-check {
     margin: 2.5rem auto; }
+  .editor__photo-input {
+    display: none; }
+  .editor__photo-label {
+    width: 100%;
+    margin-bottom: 0; }
 
 .editor__main {
   padding: 3.333rem 0; }
@@ -1426,8 +1431,13 @@ li, .contact input,
   @media screen and (min-width: 768px) {
     .editor__wysiwyg {
       margin-bottom: 1.5625rem; } }
-  .editor__wysiwyg * {
-    color: #323232; }
+  .editor__wysiwyg *,
+  .editor__wysiwyg p {
+    color: #323232;
+    margin-bottom: 0 !important; }
+
+.editor .trumbowyg-editor.trumbowyg-reset-css p {
+  margin-bottom: 0 !important; }
 
 .trumbowyg {
   margin-top: 0;

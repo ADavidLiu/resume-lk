@@ -3,6 +3,8 @@
 //@prepros-prepend "modules/popupManager.js"
 //@prepros-prepend "modules/templatesManager.js"
 //@prepros-prepend "modules/editor.js"
+//@prepros-prepend "modules/editor-education.js"
+//@prepros-prepend "modules/editor-skills.js"
 
 $(document).ready(function () {
     
@@ -97,6 +99,8 @@ $(document).ready(function () {
 
     if ($(".editor").length > 0) {
         const editor = new Editor();
+        const editorEducation = new EditorEducation();
+        const editorSkills = new EditorSkills();
     }
     
 });
