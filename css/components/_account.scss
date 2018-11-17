@@ -1,0 +1,27 @@
+.account {
+    padding: 3.333rem 0 6.667rem 0;
+    @include atMedium {
+        padding: 2.5rem 0 5rem 0;
+    }
+
+    &__subscription {
+        padding: 6.25rem 0 10.625rem 0;
+    }
+
+    &__history {
+        background-color: $color-white;
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: 0px 0px 29px 0px rgba($color-black, .05);
+        @include atMedium {
+            padding: 1.875rem;
+        }
+
+        &-table {
+            margin-top: 2rem;
+            @include atMedium {
+                margin-top: 1.5625rem;
+            }
+        }
+    }
+}

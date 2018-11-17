@@ -135,3 +135,11 @@ select {
         padding-right: 15px;
     }
 }
+
+.container {
+    &--big {
+        @include atHuge {
+            max-width: 1300px;
+        }
+    }
+}

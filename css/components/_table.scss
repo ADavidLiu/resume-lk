@@ -1,0 +1,48 @@
+.table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+
+    tr {
+        &:first-child {
+            & + tr {
+                td {
+                    padding-top: 2.5rem;
+                }
+            }
+        }
+
+        &:last-child {
+            td {
+                padding-bottom: 2.5rem;
+            }
+        }
+    }
+
+    th,
+    td {
+        text-align: center;
+        padding: 1.25rem 1.5625rem;
+        font-weight: 400;
+        white-space: nowrap;
+        @extend .heading-tertiary;
+        @include atMedium {
+            white-space: initial;
+        }
+    }
+
+    th {
+        background-color: $color-primary-alt;
+        color: $color-white;
+    }
+
+    td {
+        background-color: $color-gray-alt-10;
+        color: $color-gray-alt-19;
+    }
+}

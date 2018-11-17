@@ -1,8 +1,18 @@
 // Margin
 .u-margin {
+    &-top {
+        &-smallest {
+            margin-top: 5px;
+        }
+    }
+
     &-bottom {
         &-smallest {
             margin-bottom: 5px;
+        }
+
+        &-small {
+            margin-bottom: 1rem;
         }
 
         &-med {
@@ -47,11 +57,41 @@
             }
         }
     }
+
+    &-right {
+        &-small {
+            margin-right: 1rem;
+        }
+    }
+
+    &-md {
+        @include atMedium {
+            &-bottom {
+                &-null {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+    &-lg {
+        @include atLarge {
+            &-bottom {
+                &-null {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }
 
 
 // Font family
 .u-font {
+    &-main {
+        font-family: $font-main;
+    }
+
     &-titles {
         &-med {
             font-family: $font-titles-med;
@@ -94,6 +134,10 @@
         }
     }
 
+    &-google-plus {
+        color: $color-google-plus;
+    }
+
     &-gray {
         &-lgt {
             color: $color-gray-lgt;
@@ -109,7 +153,7 @@
             }
 
             &-12 {
-                color: $color-gray-alt-12;
+                color: $color-gray-alt-12 !important;
             }
             
             &-13 {

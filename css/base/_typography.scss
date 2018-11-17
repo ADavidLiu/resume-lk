@@ -7,6 +7,13 @@
         font-size: 2.5rem;
         line-height: 3.75rem;
     }
+
+    &--big {
+        font-size: 4rem;
+        @include atMedium {
+            font-size: 3rem;
+        }
+    }
 }
 
 .heading-secondary {
